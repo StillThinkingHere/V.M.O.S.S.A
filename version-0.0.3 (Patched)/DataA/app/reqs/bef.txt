@@ -1,0 +1,13 @@
+By clicking the "Install" button, you agree to begin the installation process.
+
+Please note that the installation will install the necessary files and components to enable the functionality of the application.
+
+During the installation, make sure to follow the provided instructions and review any prompts that appear on the screen.
+
+It is recommended to close any other applications or programs running on your computer before proceeding with the installation.
+
+By proceeding with the installation, you acknowledge that you understand the above information and accept any consequences that may arise from the installation process.
+
+If you have any questions or concerns, please refer to the provided documentation or contact our support team for assistance.
+
+Press the "Install" button to continue with the installation.
