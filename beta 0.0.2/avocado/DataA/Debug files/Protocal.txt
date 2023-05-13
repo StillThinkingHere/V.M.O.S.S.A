@@ -1,0 +1,5 @@
+PCCV (Protocal Create Cash Varuble):
+
+1. Change the CDRD (Cash Debug Reset Default) to inclue the new Default state of Cash [Not to overwrite]
+
+2. Add CVE (Cash Varuble Explination) to include the Explination
