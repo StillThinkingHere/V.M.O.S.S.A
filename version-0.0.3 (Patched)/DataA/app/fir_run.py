@@ -420,8 +420,10 @@ def Pyterm():
     
 def Emailer():
     from AvoEmail import MainGUI
-
-
+    MainGUI.run()
+    
+    
+       
 def pro():
     def log():
         def login():
@@ -443,6 +445,8 @@ def pro():
                 icon2.grid(row=0, column=1, padx=10, pady=10)
                 icon3 = tk.Button(wallpaper, text="Py Text", command=txt)
                 icon3.grid(row=0, column=2, padx=10, pady=10)
+                icon4 = tk.Button(wallpaper, text="Py Text", command=txt)
+                icon4.grid(row=0, column=2, padx=10, pady=10)
                 taskbar = tk.Frame(root, bg="white")
                 taskbar.pack(side="bottom", fill="x")
                 toolti = Tooltip(icon3, "Py OS Text Editor")
