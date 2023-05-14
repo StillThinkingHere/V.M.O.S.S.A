@@ -52,8 +52,8 @@ def clearpit(pit):
 
 
 def write(pit, data):
+    pit = open(f"Pits\Pit - a1\Pit- {pit}.avo", "w")
     pit.write(data)
-
 
 def clearallpits():
     pit0.write("")
@@ -773,7 +773,7 @@ if pit0.read() == "True":
     )
     pit0.close()
     pit0 = open("Pits\\Pit - a1\\Pit-000.avo", "w")
-    write(pit0, "False")
+    write(000, "False")
     pit0.close()
 answer = messagebox.askquestion("?", "Are you over 13?")
 
