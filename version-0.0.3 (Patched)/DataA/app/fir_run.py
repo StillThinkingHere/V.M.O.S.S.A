@@ -422,7 +422,45 @@ def Emailer():
     from AvoEmail.MainGUI import run
     run()
     
-       
+def Pass_change(true):
+    changer = tk.Tk()
+    changer.title("Password Changer")
+    def changer():
+        login_frame = tk.Frame(changer, bd=2, relief=tk.RIDGE)
+        login_frame.pack(padx=10, pady=10)
+
+        # Add login fields
+        username_label = tk.Label(login_frame, text="Current Username:")
+        username_label.pack(padx=5, pady=5)
+        username_entry = tk.Entry(login_frame)
+        username_entry.pack(padx=5, pady=5)
+
+        password_label = tk.Label(login_frame, text="Current Password:")
+        password_label.pack(padx=5, pady=5)
+        password_entry = tk.Entry(login_frame, show="*")
+        password_entry.pack(padx=5, pady=5)
+
+        login_button = tk.Button(login_frame, text="Next", command=changer)
+        login_button.pack(padx=5, pady=5)
+    if true == True:
+        login_frame = tk.Frame(changer, bd=2, relief=tk.RIDGE)
+        login_frame.pack(padx=10, pady=10)
+
+        # Add login fields
+        username_label = tk.Label(login_frame, text="Current Username:")
+        username_label.pack(padx=5, pady=5)
+        username_entry = tk.Entry(login_frame)
+        username_entry.pack(padx=5, pady=5)
+
+        password_label = tk.Label(login_frame, text="Current Password:")
+        password_label.pack(padx=5, pady=5)
+        password_entry = tk.Entry(login_frame, show="*")
+        password_entry.pack(padx=5, pady=5)
+
+        login_button = tk.Button(login_frame, text="Next", command=changer)
+        login_button.pack(padx=5, pady=5)
+    else: changer()
+           
 def pro():
     def log():
         def login():
