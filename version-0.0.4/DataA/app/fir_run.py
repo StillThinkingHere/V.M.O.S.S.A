@@ -422,7 +422,60 @@ def Emailer():
     from AvoEmail.MainGUI import run
     run()
     
-       
+def Pass_change():
+    def changes():
+        if u == username_entry.get() and p == password_entry.get():
+            changer.destroy()
+            next_changer = tk.Tk()
+            login_frame = tk.Frame(next_changer, bd=2, relief=tk.RIDGE)
+            login_frame.pack(padx=10, pady=10)
+
+            # Add login fields
+            username_label = tk.Label(login_frame, text="New Username:")
+            username_label.pack(padx=5, pady=5)
+            def change():
+                user = str(newuser.get())
+                passw = str(newpass.get())
+                next_changer.destroy()
+                pit1 = open("Pits\\Pit - a1\\Pit-001.avo", "w")
+                pit2 = open("Pits\\Pit - a1\\Pit-002.avo", "w")
+                pit1.write(user)
+                pit2.write(passw)
+                pit1.close()
+                pit2.close()
+                pit1 = open("Pits\\Pit - a1\\Pit-001.avo", "r")
+                pit2 = open("Pits\\Pit - a1\\Pit-002.avo", "r")
+
+            newuser = tk.Entry(login_frame)
+            newuser.pack(padx=5, pady=5)
+            password_label = tk.Label(login_frame, text="New Password:")
+            password_label.pack(padx=5, pady=5)
+            newpass = tk.Entry(login_frame, show="*")
+            newpass.pack(padx=5, pady=5)
+
+            login_button = tk.Button(login_frame, text="Save", command=change)
+            login_button.pack(padx=5, pady=5)
+                    
+            next_changer.mainloop()
+        else:
+            messagebox.showerror("Error", "Incorrect username or password")
+    changer = tk.Tk()
+    login_frame = tk.Frame(changer, bd=2, relief=tk.RIDGE)
+    login_frame.pack(padx=10, pady=10)
+    # Add login fields
+    username_label = tk.Label(login_frame, text="Current Username:")
+    username_label.pack(padx=5, pady=5)
+    username_entry = tk.Entry(login_frame)
+    username_entry.pack(padx=5, pady=5)
+    password_label = tk.Label(login_frame, text="Current Password:")
+    password_label.pack(padx=5, pady=5)
+    password_entry = tk.Entry(login_frame, show="*")
+    password_entry.pack(padx=5, pady=5)
+
+    login_button = tk.Button(login_frame, text="Next", command=changes)
+    login_button.pack(padx=5, pady=5)
+        
+           
 def pro():
     def log():
         def login():
@@ -444,7 +497,7 @@ def pro():
                 icon2.grid(row=0, column=1, padx=10, pady=10)
                 icon3 = tk.Button(wallpaper, text="Py Text", command=txt)
                 icon3.grid(row=0, column=2, padx=10, pady=10)
-                icon4 = tk.Button(wallpaper, text="Avo Game | I", command=lambda: show_popup("This feature is not available, with you version!"))
+                icon4 = tk.Button(wallpaper, text="Pass Change", command=Pass_change)
                 icon4.grid(row=0, column=3, padx=10, pady=10)
                 taskbar = tk.Frame(root, bg="white")
                 taskbar.pack(side="bottom", fill="x")
