@@ -1,4 +1,3 @@
-theme: jekyll-theme-minimal
 # Virtual-Machine-Operating-System-Simulator-Avocado
 This is a Virtual-Machine-Operating-System-Simulator built in python and tkinter, this uses local .avo (plain text file) as cashe and json to store settings like color.
 If you would like to help us with ides or code inpruvements send it to: avocado.script@gmail.com 
